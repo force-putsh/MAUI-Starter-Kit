@@ -27,10 +27,9 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <Button
-                Text="Load Google" 
-                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Load Google's home page"
                 Command="{Binding LoadGoogleCommand}"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 

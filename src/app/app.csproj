@@ -70,4 +70,10 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\lib\lib.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Pages\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Pages\" />
+	</ItemGroup>
 </Project>

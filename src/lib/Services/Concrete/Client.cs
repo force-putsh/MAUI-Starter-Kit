@@ -84,7 +84,7 @@ public partial class Client(HttpClient client) : IClient
         else
         {
             var error = JsonSerializer.Deserialize<Error>(content, _deserializeOptions)!;
-            return onError is not null ? onError.Invoke(error.Detail) : DefaultCallback<TError>(error.Detail);
+            return onError is not null ? onError.Invoke(error.Message) : DefaultCallback<TError>(error.Message);
         }
 
         static TTError DefaultCallback<TTError>(string s)
