@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:app.ViewModels"
-             x:Class="app.MainPage"
+             x:Class="app.Pages.MainPage"
              x:DataType="vm:MainPageViewModel">
 
     <ScrollView>
