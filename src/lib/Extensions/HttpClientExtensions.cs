@@ -1,5 +1,3 @@
-using System.Globalization;
-using System.Reflection;
 using app.Apis;
 using lib.Services.Concrete;
 
@@ -7,6 +5,14 @@ namespace lib.Extensions;
 
 public static class HttpClientExtensions
 {
+    /// <summary>
+    /// Registers an <see cref="IClient"/> service with the specified configuration, and the associated T consumer both as singletons.
+    /// This <see cref="IClient"/> will only be valid inside this specific consumer class and wont be accessible directly from the DI Container.
+    /// </summary>
+    /// <typeparam name="T">The consumer of the <see cref="IClient"/> interface we want to register.</typeparam>
+    /// <param name="builder"></param>
+    /// <param name="configurations">Specifies how to override default parameters.</param>
+    /// <returns>The builder instance that was altered based on the configurations made inside the method.</returns>
     public static MauiAppBuilder AddHttpClient<T>(this MauiAppBuilder builder, Action<HttpClientOptions> configurations) 
         where T : class
     {

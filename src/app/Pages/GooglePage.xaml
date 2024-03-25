@@ -7,6 +7,9 @@
              Title="Google">
     <VerticalStackLayout
         Padding="15">
-        <WebView Source="{Binding Content}"/>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <WebView Source="{Binding Content}"/>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>
