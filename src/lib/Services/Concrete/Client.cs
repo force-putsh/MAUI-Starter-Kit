@@ -77,6 +77,8 @@ public partial class Client(HttpClient client) : IClient
         string content = await response.Content.ReadAsStringAsync();
         if (response.IsSuccessStatusCode)
         {
+            if(typeof(TResponse) == typeof(string))
+                return (TResponse)(object) content;
             return JsonSerializer.Deserialize<TResponse>(content, _deserializeOptions)!;
         }
         else

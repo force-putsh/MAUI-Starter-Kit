@@ -1,4 +1,5 @@
 ﻿using app.Extensions;
+using CommunityToolkit.Maui;
 using lib.Extensions;
 using Microsoft.Extensions.Logging;
 
@@ -11,8 +12,11 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiCommunityToolkit()
 			.RegisterServices()
 			.RegisterLibrary()
+			.RegisterViews()
+			.RegisterViewModels()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -26,4 +30,3 @@ public static class MauiProgram
 		return builder.Build();
 	}
 }
-
